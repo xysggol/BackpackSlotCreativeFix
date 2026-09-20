@@ -1,0 +1,15 @@
+{
+  "$schema": "https://gitee.com/SC-SPM/SurvivalcraftApi/raw/SCAPI1.9/Survivalcraft/Content/modinfo-scheme.json",
+  "Name": "背包槽创造修复 Backpack Slot Creative Fix",
+  "Version": "1.0.0",
+  "ApiVersion": "1.9.3.1",
+  "Description": "修复“增加背包槽”类模组的通病：在创造模式下，被撑大的背包槽会被取之不尽的创造栏物品占用。本模组会把创造库存的个人槽数量同步为玩家背包的实际槽数，使新增槽位恢复为可自由存取的普通槽位。 | Fixes a common bug of backpack-slot-expanding mods: in creative mode the extra backpack slots are occupied by infinite creative items. This mod syncs the creative inventory's personal slot count with the player's actual inventory slot count so the extra slots become normal, freely usable slots.",
+  "ScVersion": "2.4.0.0",
+  "LoadOrder": 10000,
+  "NonPersistentMod": true,
+  "GameplayImpactLevel": "Assist",
+  "Link": "https://github.com/your-name/BackpackSlotCreativeFix",
+  "Author": "xysgg",
+  "PackageName": "scmod.backpackslotcreativefix",
+  "Dependencies": {}
+}
