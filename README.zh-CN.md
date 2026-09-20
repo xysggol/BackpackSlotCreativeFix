@@ -1,6 +1,6 @@
 # 背包槽创造修复
 
-一个用于《[生存战争](https://gitee.com/SC-SPM/SurvivalcraftApi)》插件版（SCAPI 1.9.x）的通用兼容修复模组。
+一个用于[生存战争插件版](https://gitee.com/SC-SPM/SurvivalcraftApi)（SCAPI 1.9.x）的通用兼容修复模组。
 
 [English](README.md)
 
@@ -35,7 +35,7 @@ OpenSlotsCount = max(原 OpenSlotsCount, 玩家 ComponentInventory 实际槽数)
 
 ## 兼容性与限制
 
-- 通过与《[生存战争](https://gitee.com/SC-SPM/SurvivalcraftApi)》插件版 1.9.3.1 共同测试/编译。
+- 通过与[生存战争插件版 1.9.3.1](https://gitee.com/SC-SPM/SurvivalcraftApi/releases/tag/API_1.9.3.1) 共同测试/编译。
 - 目标为“扩大玩家 `ComponentInventory` 槽数”的背包模组，无论是通过修改 `Database.xml`/模板，还是在玩家库存组件加载前后修改 `SlotsCount`，均可自动同步。
 - 本模组不会自行增加背包槽，只负责把创造模式的个人槽数量对齐到玩家背包实际槽数。
 - 若某个背包模组使用完全独立的库存组件（不改变玩家 `ComponentInventory`），本模组无法自动识别。
@@ -45,7 +45,7 @@ OpenSlotsCount = max(原 OpenSlotsCount, 玩家 ComponentInventory 实际槽数)
 1. 从 Releases 下载 `BackpackSlotCreativeFix_API193.scmod`。
 2. **PC（Windows / Linux）**：把 `.scmod` 放入游戏目录下的 `Mods/` 文件夹。
 3. **Android**：把 `.scmod` 推送到 `/storage/emulated/0/Survivalcraft2.4_API1.9/Mods`，或在设备上直接打开该文件安装。
-4. 与对应的“增加背包槽”模组一同启用即可。建议本模组的加载顺序晚于（数值大于）背包模组。
+4. 与对应的“增加背包槽”模组一同启用即可。建议本模组的加载顺序晚于（LoadOrder数值大于）背包模组。
 
 ## 从源码构建
 
