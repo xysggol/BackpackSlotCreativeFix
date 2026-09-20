@@ -8,7 +8,7 @@
   "LoadOrder": 10000,
   "NonPersistentMod": true,
   "GameplayImpactLevel": "Assist",
-  "Link": "https://github.com/your-name/BackpackSlotCreativeFix",
+  "Link": "https://github.com/xysggol/BackpackSlotCreativeFix",
   "Author": "xysgg",
   "PackageName": "scmod.backpackslotcreativefix",
   "Dependencies": {}

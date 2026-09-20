@@ -57,6 +57,15 @@ dotnet build BackpackSlotCreativeFix_API193.csproj -c Release
 
 On success, `BackpackSlotCreativeFix_API193.scmod` is generated in `bin/Release/`.
 
+## Releasing (maintainers)
+
+Pushing a tag matching `v*` triggers the workflow in `.github/workflows/release.yml`. It builds the `.scmod` on GitHub's runners and attaches it (plus a `.sha256` checksum) to the GitHub release, so nothing has to be uploaded from your machine:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 ## License
 
 Released under the **GNU Lesser General Public License v3.0 (LGPL-3.0)**. See [LICENSE](LICENSE). LGPL-3.0 incorporates the terms of the GNU GPL v3.0, whose full text is in [LICENSE.GPL-3.0](LICENSE.GPL-3.0).

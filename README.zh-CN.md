@@ -57,6 +57,15 @@ dotnet build BackpackSlotCreativeFix_API193.csproj -c Release
 
 构建成功后会在 `bin/Release/` 下生成 `BackpackSlotCreativeFix_API193.scmod`。
 
+## 发布新版本（维护者）
+
+推送一个匹配 `v*` 的 tag 会触发 `.github/workflows/release.yml`：由 GitHub 的 runner 构建 `.scmod`，并自动把模组文件与 `.sha256` 校验文件挂到对应的 GitHub Release 上，本机无需上传任何东西：
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 ## 许可证
 
 本项目以 **GNU Lesser General Public License v3.0（LGPL-3.0）** 发布，详见 [LICENSE](LICENSE)。LGPL-3.0 内含对 GNU GPL v3.0 的引用，其完整文本见 [LICENSE.GPL-3.0](LICENSE.GPL-3.0)。
