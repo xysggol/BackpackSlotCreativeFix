@@ -59,8 +59,31 @@
 - 指纹：`8215CF979D9A483449BA5982D63479F50BA4B12A`
 - UID：`xysgg <225452402+xysggol@users.noreply.github.com>`，**无口令**
 - 全局已开启：`commit.gpgsign=true`、`tag.gpgsign=true`、`user.signingkey=<指纹>`、`gpg.program=gpg`
-- 只有把该公钥加入 GitHub `Settings → SSH and GPG keys → New GPG key` 后，提交/标签才会显示 **Verified**。
 - 验证签名：`git log --show-signature`；打签名标签：`git tag -s v1.0.1 -m "..."`。
+
+#### 把 GPG 公钥加入 GitHub（否则提交/标签显示 Unverified）
+
+未把公钥加入账号时，GitHub 上会显示 `verified: False, reason: unknown_key`。
+
+1. 打开 https://github.com/settings/gpg/new （或 `Settings → SSH and GPG keys → New GPG key`）。
+2. 粘贴下面整段公钥，点 **Add GPG key**：
+
+   ```
+   -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+   mDMEaq+34BYJKwYBBAHaRw8BAQdARZq1hvLGmUxKrvmQ4Yubn24JfuTAGaiMu0FC
+   EGjhoCC0Mnh5c2dnIDwyMjU0NTI0MDIreHlzZ2dvbEB1c2Vycy5ub3JlcGx5Lmdp
+   dGh1Yi5jb20+iJMEExYKADsWIQSCFc+XnZpINEm6WYLWNHn1C6SxKgUCaq+34AIb
+   AwULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRDWNHn1C6SxKoexAP9nBJBh
+   i2f4QArlwgQwXQu2N6lZwTFB4017l+/0ag33yQEA+YjVuTURnfNWbMGLDNSE4gDT
+   zgYN1stUau6tBWoYMAg=
+   =refa
+   -----END PGP PUBLIC KEY BLOCK-----
+   ```
+
+3. 添加后，该密钥签名的提交/标签（包括已推送的历史提交）都会变为 **Verified**。
+
+   导出公钥命令（如需重新导出）：`gpg --armor --export 8215CF979D9A483449BA5982D63479F50BA4B12A`
 
 ### GitHub CLI
 
