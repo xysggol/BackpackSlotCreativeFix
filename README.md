@@ -1,6 +1,6 @@
 # Backpack Slot Creative Fix
 
-A generic compatibility fix mod for [Survivalcraft](https://gitee.com/SC-SPM/SurvivalcraftApi) API 1.9.x.
+A generic compatibility fix mod for [Survivalcraft API](https://gitee.com/SC-SPM/SurvivalcraftApi) 1.9.x.
 
 [中文说明 / Chinese](README.zh-CN.md)
 
@@ -35,7 +35,7 @@ Both `Load` and `Save` use the same `OpenSlotsCount`, so:
 
 ## Compatibility & limitations
 
-- Built and tested against [Survivalcraft](https://gitee.com/SC-SPM/SurvivalcraftApi) API 1.9.3.1.
+- Built and tested against [Survivalcraft API 1.9.3.1](https://gitee.com/SC-SPM/SurvivalcraftApi/releases/tag/API_1.9.3.1).
 - Targets backpack mods that enlarge the player's `ComponentInventory` slot count, whether via `Database.xml`/templates or by changing `SlotsCount` around the player inventory load; both are synced automatically.
 - This mod does not add backpack slots itself. It only aligns the creative personal-slot count with the player's actual inventory size.
 - If a backpack mod uses a completely separate inventory component (not the player's `ComponentInventory`), it cannot be detected automatically.
